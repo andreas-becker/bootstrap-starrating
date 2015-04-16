@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<!-- (c) Andreas Becker (andreasbecker.de) -->
+	<title>Bootstrap Starrating</title>
+	<link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" media="all">
+	<style>
+		body{font-size:24px;padding:40px;}
+		.starrating span{color:lightgray;}
+		.starrating span:hover{color:#FFCC4B;}
+		.starrating{direction:rtl;unicode-bidi:bidi-override;}
+		.starrating > span{cursor:pointer;display:inline-block;position:relative;}
+		.starrating > span:hover, .starrating > span:hover ~ span,
+		.starrating > span.active, .starrating > span.active ~ span{color:#FFCC4B;}
+		.starrating:hover > span{color:lightgray;}
+		.starrating:hover > span:hover, .starrating:hover > span:hover ~ span{color:#FFCC4B;}
+		.glyphicon-star.half{position:relative;}
+		.glyphicon-star.half:before{display:inline-block;overflow:hidden;position:relative;width:49%;z-index:9;}
+		.glyphicon-star.half:after{color:#FFCC4B;content:'\e006';left:0;position:absolute;top:0;z-index:8;}
+		.starrating:hover > span.half:before{display:inline;height:auto;overflow:auto;width:auto;}
+		.starrating:hover > span.half:after{content:none;}
+	</style>
+	</head>
+	<body>
+		<div class="tx-wevoting-pi1">
+		  <span class="">Rate me! </span>
+		  <span class="starrating">
+		    <span class="glyphicon glyphicon-star" data-rating="5"></span>
+		    <span class="glyphicon glyphicon-star" data-rating="4"></span>
+		    <span class="glyphicon glyphicon-star half" data-rating="3"></span>
+		    <span class="glyphicon glyphicon-star active" data-rating="2"></span>
+		    <span class="glyphicon glyphicon-star" data-rating="1"></span>
+		  </span>
+		</div>
+	</body>
+</html>
